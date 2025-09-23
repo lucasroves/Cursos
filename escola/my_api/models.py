@@ -31,4 +31,4 @@ class Avaliacao(Base):
         verbose_name_plural = 'Avaliações'
 
     def __str__(self):
-        return f'{self.nome} - {self.avaliacao}'
+        return f'{self.nome}, {self.avaliacao} estrelas'

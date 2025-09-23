@@ -10,8 +10,8 @@ class AvaliacaoSerializer(serializers.ModelSerializer):
         fields = ('id', 'curso', 'nome', 'email', 'avaliacao', 'criacao', 'atualizacao', 'ativo')
 
 class CursoSerializer(serializers.ModelSerializer):
-        #avaliacoes = AvaliacaoSerializer(many=True, read_only=True)
-    
+       
+        avaliacoes = serializers.StringRelatedField(many=True)
         class Meta:
             model = Curso
             fields = ('id', 'titulo', 'url', 'criacao', 'atualizacao', 'ativo', 'avaliacoes')
